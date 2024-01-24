@@ -108,5 +108,7 @@ def recommendationAlgorithm(listOfAnime, username):
 
 
 def algo(username, numOfRecs):
-    animeList = animeInfo.getUserAnime(login.getUserAnimeList(login.getUserID(username)))
+
+    animeList = animeInfo.getUserAnime(login.getUserAnimeList((int(login.getUserID(username)))))
+    print("animeList acquired");
     recommendationAlgorithm(getAnimeFromGenre(animeList, randomChooseAnime(animeList), int(numOfRecs)), username)
